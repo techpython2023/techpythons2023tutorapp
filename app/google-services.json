@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1078254798605",
+    "project_id": "techpythons2023-afc63",
+    "storage_bucket": "techpythons2023-afc63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078254798605:android:0e855a1db54f0e3dc11244",
+        "android_client_info": {
+          "package_name": "com.example.techpythons2023"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078254798605-nkdcbb7qvig507g6692si6onsi6higf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3Q3FirZDi60XmR_zPdHaYcJYARTpWkxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078254798605-nkdcbb7qvig507g6692si6onsi6higf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
