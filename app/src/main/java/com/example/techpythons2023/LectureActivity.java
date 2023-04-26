@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.techpythons2023.Model.Selected;
 import com.example.techpythons2023.Prevalent.Prevalent;
 
 public class LectureActivity extends AppCompatActivity {
@@ -24,7 +25,7 @@ public class LectureActivity extends AppCompatActivity {
 
 
         lectureemail.setText(Prevalent.currentOnlineUser.getEmail().toString().replace(",","."));
-
+        Selected.value3 = Prevalent.currentOnlineUser.getEmail().toLowerCase();
         modsbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)

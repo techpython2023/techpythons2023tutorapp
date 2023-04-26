@@ -153,6 +153,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 Intent intent = new Intent(LoginActivity.this, LectureActivity.class);
                                 Prevalent.currentOnlineUser = usersData;
+
                                 startActivity(intent);
                             }
                         }

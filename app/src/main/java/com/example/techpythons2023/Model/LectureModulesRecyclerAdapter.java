@@ -1,22 +1,15 @@
 package com.example.techpythons2023.Model;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.techpythons2023.AdddepActivity;
-import com.example.techpythons2023.DepartmentsActivity;
 import com.example.techpythons2023.LoginActivity;
 import com.example.techpythons2023.R;
 import com.google.firebase.database.DatabaseReference;
@@ -28,9 +21,9 @@ public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureM
 
     LoginActivity l = new LoginActivity();
     Context context;
-    ArrayList<ModuleItem> moduleItemItemArrayList;
+    ArrayList<Lecturemoduleitem> moduleItemItemArrayList;
     DatabaseReference databaseReference;
-    public LectureModulesRecyclerAdapter(Context context, ArrayList<ModuleItem> moduleItemItemArrayList) {
+    public LectureModulesRecyclerAdapter(Context context, ArrayList<Lecturemoduleitem> moduleItemItemArrayList) {
         this.context = context;
         this.moduleItemItemArrayList = moduleItemItemArrayList;
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -47,7 +40,7 @@ public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureM
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        ModuleItem modules = moduleItemItemArrayList.get(position);
+        Lecturemoduleitem modules = moduleItemItemArrayList.get(position);
 
         holder.textcozname.setText(modules.getModname());
         holder.textmodulename.setText(modules.getCosname());

@@ -10,10 +10,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.techpythons2023.Model.LectureModulesRecyclerAdapter;
+import com.example.techpythons2023.Model.Lecturemoduleitem;
 import com.example.techpythons2023.Model.ModuleItem;
 import com.example.techpythons2023.Model.ModulesRecyclerAdapter;
+import com.example.techpythons2023.Model.Selected;
+import com.example.techpythons2023.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,7 +30,7 @@ public class LectureModulesActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
 
     RecyclerView recyclerView;
-    ArrayList<ModuleItem> moduleItemArrayList;
+    ArrayList<Lecturemoduleitem> moduleItemArrayList;
     LectureModulesRecyclerAdapter adapter;
     Button addmodbtn;
 
@@ -66,14 +70,24 @@ public class LectureModulesActivity extends AppCompatActivity {
 
     private void readData() {
 
-        databaseReference.child("Modules").orderByChild("Modname").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Lecturemodules").orderByChild("Modname").addValueEventListener(new ValueEventListener() {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 moduleItemArrayList.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    ModuleItem moduleItem = dataSnapshot.getValue(ModuleItem.class);
-                    moduleItemArrayList.add(moduleItem);
+                    Lecturemoduleitem moduleItem = dataSnapshot.getValue(Lecturemoduleitem.class);
+
+                    String ce = Prevalent.currentOnlineUser.getEmail().toString().toLowerCase();
+                    String ie = moduleItem.getLecemail().toString().toLowerCase();
+
+                    Toast.makeText(LectureModulesActivity.this, ce +" "+ ie, Toast.LENGTH_SHORT).show();
+
+                    if(ce == ie){
+
+                        moduleItemArrayList.add(moduleItem);
+
+                    }
                 }
                 adapter = new LectureModulesRecyclerAdapter(LectureModulesActivity.this, moduleItemArrayList);
                 recyclerView.setAdapter(adapter);
