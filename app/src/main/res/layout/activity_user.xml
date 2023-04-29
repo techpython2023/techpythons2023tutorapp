@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".UserActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,53 +22,78 @@
             android:id="@+id/textView"
             android:layout_width="348dp"
             android:layout_height="wrap_content"
-            android:text="WELCOME TO DUT TA / TUTOR
-        APPOINTMENT SYSTEM"
+            android:text="USER / TA PORTAL"
             android:textAlignment="center"
             android:textColor="#2196F3"
-            android:textSize="10pt"
+            android:textSize="15pt"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.417" />
 
-        <ImageView
-            android:layout_width="134dp"
-            android:layout_height="135dp"
-            android:layout_marginTop="128dp"
-            android:src="@drawable/graduation"
+        <TextView
+            android:id="@+id/useremail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user-email"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.681" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <Button
-        android:id="@+id/taopbtn"
+        android:id="@+id/myappsbtn"
         android:layout_width="334dp"
-        android:layout_height="145dp"
-        android:text="AVAILABLE POSITIONS"
+        android:layout_height="50dp"
+        android:text="MY APPLICATIONS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.397" />
+
+    <Button
+        android:id="@+id/avjobsbtn"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        android:text="AVAILABLE JOBS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <Button
+        android:id="@+id/coursesbtn"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        android:text="MY INTERVIEWS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.607" />
+
+    <Button
+        android:id="@+id/modulesbtn"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        android:text="CHANGE PASSWORD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
-
-
-    <Button
-        android:layout_width="334dp"
-        android:layout_height="149dp"
-        android:text="REQUEST TUTOR /TA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
+        app:layout_constraintVertical_bias="0.713" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -83,29 +108,15 @@
         app:layout_constraintVertical_bias="1.0">
 
         <Button
-            android:id="@+id/regbtn"
-            android:layout_width="180dp"
+            android:id="@+id/logoutbtn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="10dp"
-            android:text="REGISTER"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.529" />
-
-        <Button
-            android:id="@+id/logbtn"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
             android:layout_marginRight="15dp"
-            android:text="LOGIN"
+            android:text="lOGOUT"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.529" />

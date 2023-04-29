@@ -4,74 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    android:layout_gravity="center"
+    tools:context=".HodTArequestsActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="248dp"
+        android:layout_height="100dp"
         android:background="@drawable/rounded"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.039"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="-8dp"
+        tools:layout_editor_absoluteY="2dp"
+        >
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="348dp"
             android:layout_height="wrap_content"
-            android:text="WELCOME TO DUT TA / TUTOR
-        APPOINTMENT SYSTEM"
+            android:text="TA REQUESTS"
             android:textAlignment="center"
             android:textColor="#2196F3"
-            android:textSize="10pt"
+            android:textSize="15pt"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.417" />
-
-        <ImageView
-            android:layout_width="134dp"
-            android:layout_height="135dp"
-            android:layout_marginTop="128dp"
-            android:src="@drawable/graduation"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/taopbtn"
-        android:layout_width="334dp"
-        android:layout_height="145dp"
-        android:text="AVAILABLE POSITIONS"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="499dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
-
-
-    <Button
-        android:layout_width="334dp"
-        android:layout_height="149dp"
-        android:text="REQUEST TUTOR /TA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="85dp"
         android:background="@drawable/roundedup"
@@ -83,12 +58,12 @@
         app:layout_constraintVertical_bias="1.0">
 
         <Button
-            android:id="@+id/regbtn"
+            android:id="@+id/addmodbtn"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="10dp"
-            android:text="REGISTER"
+            android:layout_marginRight="5dp"
+            android:text="HOD PORTAL"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -97,12 +72,12 @@
             app:layout_constraintVertical_bias="0.529" />
 
         <Button
-            android:id="@+id/logbtn"
+            android:id="@+id/backtoadmin"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="15dp"
-            android:text="LOGIN"
+            android:text="courses"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"

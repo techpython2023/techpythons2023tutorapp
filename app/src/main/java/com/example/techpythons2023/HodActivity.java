@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.techpythons2023.Prevalent.Prevalent;
 
 public class HodActivity extends AppCompatActivity {
-    Button cosbtn;
+    Button cosbtn,tarequestsbtn;
     TextView hodemail;
 
     @Override
@@ -20,6 +20,7 @@ public class HodActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hod);
         cosbtn = (Button) findViewById(R.id.cosbtn);
         hodemail = findViewById(R.id.hodemail);
+        tarequestsbtn = findViewById(R.id.tarequestsbtn);
 
 
         hodemail.setText(Prevalent.currentOnlineUser.getEmail().toString().replace(",","."));
@@ -30,6 +31,15 @@ public class HodActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 Intent i = new Intent(HodActivity.this, HodCoursesActivity.class);
+                startActivity(i);
+            }
+        });
+
+        tarequestsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(HodActivity.this, HodTArequestsActivity.class);
                 startActivity(i);
             }
         });

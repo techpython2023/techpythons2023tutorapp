@@ -25,7 +25,7 @@ import java.util.HashMap;
 public class HomeActivity extends AppCompatActivity {
 
 
-    private ImageButton loginbtn;
+    private Button logbtn,regbtn,taopbtn;
 
 
     @Override
@@ -35,15 +35,34 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-        loginbtn = findViewById(R.id.loginbtn);
+        logbtn = findViewById(R.id.logbtn);
+        regbtn = findViewById(R.id.regbtn);
+        taopbtn = findViewById(R.id.taopbtn);
 
 
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
+        taopbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(HomeActivity.this, UseropeningsActivity.class);
+                startActivity(i);
+            }
+        });
+        logbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
                 Intent i = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(i);
+            }
+        });
+
+        regbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(HomeActivity.this, RegisterActivity.class);
                 startActivity(i);
             }
         });

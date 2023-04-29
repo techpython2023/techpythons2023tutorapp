@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.techpythons2023.Model.Selected;
 import com.example.techpythons2023.Model.Users;
 import com.example.techpythons2023.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -124,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                             {
                                 Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, UserActivity.class);
                                 Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
                             }
@@ -153,7 +154,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 Intent intent = new Intent(LoginActivity.this, LectureActivity.class);
                                 Prevalent.currentOnlineUser = usersData;
-
+                                Selected.value3 = usersData.getEmail().trim().toLowerCase();
                                 startActivity(intent);
                             }
                         }

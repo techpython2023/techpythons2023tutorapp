@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.techpythons2023.AllocateModuletoLectureActivity;
 import com.example.techpythons2023.LecturerequestTAActivity;
+import com.example.techpythons2023.LecturerequestdetailsActivity;
 import com.example.techpythons2023.LoginActivity;
 import com.example.techpythons2023.R;
 import com.google.firebase.database.DatabaseReference;
@@ -20,13 +20,12 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureModulesRecyclerAdapter.ViewHolder> {
+public class LecturetaRequestsAdapter extends RecyclerView.Adapter<LecturetaRequestsAdapter.ViewHolder> {
 
-    LoginActivity l = new LoginActivity();
     Context context;
-    ArrayList<Lecturemoduleitem> moduleItemItemArrayList;
+    ArrayList<TarequestItem> moduleItemItemArrayList;
     DatabaseReference databaseReference;
-    public LectureModulesRecyclerAdapter(Context context, ArrayList<Lecturemoduleitem> moduleItemItemArrayList) {
+    public LecturetaRequestsAdapter(Context context, ArrayList<TarequestItem> moduleItemItemArrayList) {
         this.context = context;
         this.moduleItemItemArrayList = moduleItemItemArrayList;
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -36,30 +35,28 @@ public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureM
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.lecturemodule_item, parent, false);
+        View view = layoutInflater.inflate(R.layout.lecrequest_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Lecturemoduleitem modules = moduleItemItemArrayList.get(position);
+        TarequestItem modules = moduleItemItemArrayList.get(position);
 
-        holder.textcozname.setText(modules.getModname());
-        holder.textmodulename.setText(modules.getCosname());
+        holder.txtmodnam.setText(modules.getModname());
+        holder.txtreason.setText(modules.getReason());
 
-        holder.btnrequestta.setOnClickListener(new View.OnClickListener() {
+        holder.reqdetailbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Selected.value1 = modules.getLecmodid();
-                Selected.value2 = modules.getModname();
-                Selected.value3 = modules.getCosname();
+                Selected.value1 = modules.getRequestid();
 
-
-                Intent intent = new Intent(context, LecturerequestTAActivity.class);
+                Intent intent = new Intent(context, LecturerequestdetailsActivity.class);
                 context.startActivity(intent);
             }
         });
+
 
 
 
@@ -79,18 +76,18 @@ public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureM
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textcozname;
-        TextView textmodulename;
+        TextView txtmodnam;
+        TextView txtreason;
 
-        Button btnrequestta;
+        Button reqdetailbtn;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            textcozname = itemView.findViewById(R.id.textcozname);
-            textmodulename = itemView.findViewById(R.id.textmodulename);
+            txtmodnam = itemView.findViewById(R.id.txtmodname);
+            txtreason = itemView.findViewById(R.id.txtreson);
+            reqdetailbtn = itemView.findViewById(R.id.reqdetailbtn);
 
-            btnrequestta = itemView.findViewById(R.id.btnrequestta);
         }
     }
 
@@ -100,6 +97,4 @@ public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureM
 
 
 }
-
-
 

@@ -14,7 +14,7 @@ import com.example.techpythons2023.Prevalent.Prevalent;
 public class LectureActivity extends AppCompatActivity {
 
     TextView lectureemail;
-    Button modsbtn;
+    Button modsbtn,tarequestsbtn,logoutbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,9 @@ public class LectureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lecture);
         lectureemail = findViewById(R.id.lectureemail);
         modsbtn = findViewById(R.id.modsbtn);
+        tarequestsbtn = findViewById(R.id.tarequestsbtn);
+        logoutbtn = findViewById(R.id.logoutbtn);
+
 
 
         lectureemail.setText(Prevalent.currentOnlineUser.getEmail().toString().replace(",","."));
@@ -31,6 +34,25 @@ public class LectureActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 Intent i = new Intent(LectureActivity.this,LectureModulesActivity.class);
+                startActivity(i);
+            }
+        });
+
+        logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(LectureActivity.this,LoginActivity.class);
+
+                startActivity(i);
+            }
+        });
+
+        tarequestsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(LectureActivity.this, LectureTARequestsActivity.class);
                 startActivity(i);
             }
         });
