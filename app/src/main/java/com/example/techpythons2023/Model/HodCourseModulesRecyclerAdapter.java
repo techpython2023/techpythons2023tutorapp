@@ -44,8 +44,8 @@ public class HodCourseModulesRecyclerAdapter extends RecyclerView.Adapter<HodCou
 
         ModuleItem modules = moduleItemItemArrayList.get(position);
 
-        holder.textcozname.setText(modules.getCosname());
-        holder.textmodname.setText(modules.getModname());
+        holder.cozname.setText(modules.getCosname());
+        holder.modname.setText(modules.getModname());
         holder.btnasignlec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,15 +75,15 @@ public class HodCourseModulesRecyclerAdapter extends RecyclerView.Adapter<HodCou
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textcozname;
-        TextView textmodname;
+        TextView cozname;
+        TextView modname;
         Button btnasignlec;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            textcozname = itemView.findViewById(R.id.textcozname);
-            textmodname = itemView.findViewById(R.id.textmodname);
+            cozname = itemView.findViewById(R.id.cozname);
+            modname = itemView.findViewById(R.id.modname);
             btnasignlec = itemView.findViewById(R.id.btnasignlec);
         }
     }

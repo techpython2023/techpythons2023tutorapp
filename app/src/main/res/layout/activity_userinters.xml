@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".HodcozmodulesActivity">
+    tools:context=".UserintersActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +20,7 @@
             android:id="@+id/textView"
             android:layout_width="348dp"
             android:layout_height="wrap_content"
-            android:text="COURSE MODULES"
+            android:text="MY INTERVIEWS"
             android:textAlignment="center"
             android:textColor="#2196F3"
             android:textSize="15pt"
@@ -60,12 +60,12 @@
 
 
         <Button
-            android:id="@+id/hodpotbtn"
+            android:id="@+id/tapotbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="HOD PORTAL"
+            android:text="USER PORTAL"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"

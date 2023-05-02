@@ -44,12 +44,11 @@
         app:layout_constraintVertical_bias="0.371" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/reqdetailbtn"
+        android:id="@+id/appdetailbtn"
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:background="@color/purple_500"
-        android:text="application details"
-        android:visibility="gone"
+        android:text="interview details"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:textColor="@color/white"

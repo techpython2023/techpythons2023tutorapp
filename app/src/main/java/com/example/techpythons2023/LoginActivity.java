@@ -26,7 +26,7 @@ import java.util.Locale;
 public class LoginActivity extends AppCompatActivity {
 
 
-    private TextView textregister;
+    private Button reg;
 
     private EditText Email, Password;
     private Button LoginButton;
@@ -40,17 +40,17 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        textregister = findViewById(R.id.textregister);
+        reg = findViewById(R.id.regbtn);
 
 
-        LoginButton = (Button) findViewById(R.id.loginbtn);
-        Email = (EditText) findViewById(R.id.email);
-        Password = (EditText) findViewById(R.id.password);
+        LoginButton = (Button) findViewById(R.id.submitbtn);
+        Email = (EditText) findViewById(R.id.Email);
+        Password = (EditText) findViewById(R.id.Password);
 
 
 
 
-        textregister.setOnClickListener(new View.OnClickListener() {
+        reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(email))
         {
-            Toast.makeText(this, "Please write your phone number...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please write your email...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(password))
         {
@@ -130,12 +130,14 @@ public class LoginActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }
 
+
+                            Prevalent.currentOnlineUser = usersData;
+
                             if (usersData.getRole().equals("Admin"))
                             {
                                 Toast.makeText(LoginActivity.this, "Admin logged in Successfully...", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
-                                Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
                             }
 
@@ -144,7 +146,6 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Hod logged in Successfully...", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(LoginActivity.this, HodActivity.class);
-                                Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
                             }
 
@@ -153,7 +154,6 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Lecture logged in Successfully...", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(LoginActivity.this, LectureActivity.class);
-                                Prevalent.currentOnlineUser = usersData;
                                 Selected.value3 = usersData.getEmail().trim().toLowerCase();
                                 startActivity(intent);
                             }

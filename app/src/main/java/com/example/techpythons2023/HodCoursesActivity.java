@@ -29,14 +29,15 @@ public class HodCoursesActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<HodCourseItem> hodcourseItemArrayList;
     HodCoursesRecyclerAdapter adapter;
-    Button adddepbtn;
+    Button hodpotbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hod_courses);
 
-        adddepbtn = (Button) findViewById(R.id.adddepbtn);
+        hodpotbtn = findViewById(R.id.hodpotbtn);
+
 
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -49,7 +50,7 @@ public class HodCoursesActivity extends AppCompatActivity {
         hodcourseItemArrayList = new ArrayList<>();
 
 
-        adddepbtn.setOnClickListener(new View.OnClickListener() {
+        hodpotbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {

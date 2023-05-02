@@ -76,7 +76,7 @@ public class HodappdetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent i = new Intent(HodappdetailsActivity.this, HodTArequestsActivity.class);
+                Intent i = new Intent(HodappdetailsActivity.this, ScheduleinterviewActivity.class);
                 startActivity(i);
             }
         });
@@ -87,7 +87,6 @@ public class HodappdetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-
                 imageView3.setVisibility(View.GONE);
                 closebtn.setVisibility(View.GONE);
 
@@ -165,9 +164,7 @@ public class HodappdetailsActivity extends AppCompatActivity {
                         txtapprove.setVisibility(View.GONE);
                         declinebtn.setVisibility(View.GONE);
                         txtdecline.setVisibility(View.GONE);
-
                     }
-
 
 
                 }
@@ -221,7 +218,6 @@ public class HodappdetailsActivity extends AppCompatActivity {
                     Toast.makeText(HodappdetailsActivity.this, "Request doesnt exist", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(HodappdetailsActivity.this, HodTArequestsActivity.class);
                     startActivity(i);
-
                 }
             }
 

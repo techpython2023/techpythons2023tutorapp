@@ -11,22 +11,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.techpythons2023.AllocateModuletoLectureActivity;
-import com.example.techpythons2023.LecturerequestTAActivity;
-import com.example.techpythons2023.LoginActivity;
+import com.example.techpythons2023.HodinterdetailsActivity;
 import com.example.techpythons2023.R;
+import com.example.techpythons2023.UserinterdetailsActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureModulesRecyclerAdapter.ViewHolder> {
 
-    LoginActivity l = new LoginActivity();
+
+
+public class UserintersAdapter extends RecyclerView.Adapter<UserintersAdapter.ViewHolder> {
+
     Context context;
-    ArrayList<Lecturemoduleitem> moduleItemItemArrayList;
+    ArrayList<InterviewItem> moduleItemItemArrayList;
     DatabaseReference databaseReference;
-    public LectureModulesRecyclerAdapter(Context context, ArrayList<Lecturemoduleitem> moduleItemItemArrayList) {
+
+    public UserintersAdapter(Context context, ArrayList<InterviewItem> moduleItemItemArrayList) {
         this.context = context;
         this.moduleItemItemArrayList = moduleItemItemArrayList;
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -36,30 +38,31 @@ public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureM
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.lecturemodule_item, parent, false);
+        View view = layoutInflater.inflate(R.layout.userinter_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Lecturemoduleitem modules = moduleItemItemArrayList.get(position);
+        InterviewItem modules = moduleItemItemArrayList.get(position);
 
-        holder.cozname.setText(modules.getCosname());
-        holder.modname.setText(modules.getModname());
+        holder.txtmodnam.setText(modules.getModname());
+        holder.txtreason.setText(modules.getStatus());
+        holder.txtqual.setText(modules.getCosname());
 
-        holder.btnrequestta.setOnClickListener(new View.OnClickListener() {
+
+        holder.appdetailbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Selected.value1 = modules.getLecmodid();
-                Selected.value2 = modules.getModname();
-                Selected.value3 = modules.getCosname();
 
-
-                Intent intent = new Intent(context, LecturerequestTAActivity.class);
+                Selected.value1 = modules.getInterid();
+                Selected.value2 = modules.getApplid();
+                Intent intent = new Intent(context, UserinterdetailsActivity.class);
                 context.startActivity(intent);
             }
         });
+
 
 
 
@@ -79,27 +82,26 @@ public class LectureModulesRecyclerAdapter extends RecyclerView.Adapter<LectureM
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView cozname;
-        TextView modname;
+        TextView txtmodnam;
+        TextView txtreason,txtqual;
 
-        Button btnrequestta;
+        Button appdetailbtn;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            cozname = itemView.findViewById(R.id.cozname);
-            modname = itemView.findViewById(R.id.modname);
+            txtmodnam = itemView.findViewById(R.id.txtmodname);
+            txtreason = itemView.findViewById(R.id.txtreson);
+            txtqual = itemView.findViewById(R.id.txtqual);
 
-            btnrequestta = itemView.findViewById(R.id.btnrequestta);
+            appdetailbtn = itemView.findViewById(R.id.appdetailbtn);
+
         }
     }
-
-
-
-
-
-
 }
+
+
+
 
 
 

@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.techpythons2023.Model.HodRequestsAdapter;
 import com.example.techpythons2023.Model.LecturetaRequestsAdapter;
@@ -28,10 +31,15 @@ public class HodTArequestsActivity extends AppCompatActivity {
     ArrayList<TarequestItem> moduleItemArrayList;
     HodRequestsAdapter adapter;
 
+    Button hodpotbtn,hodcozsbtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hod_tarequests);
+
+        hodcozsbtn = findViewById(R.id.hodcozsbtn);
+        hodpotbtn = findViewById(R.id.hodpotbtn);
 
 
 
@@ -44,7 +52,24 @@ public class HodTArequestsActivity extends AppCompatActivity {
 
         moduleItemArrayList = new ArrayList<>();
 
+        hodpotbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(HodTArequestsActivity.this, HodActivity.class);
+                startActivity(i);
+            }
+        });
 
+
+        hodcozsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(HodTArequestsActivity.this, HodCoursesActivity.class);
+                startActivity(i);
+            }
+        });
 
 
 

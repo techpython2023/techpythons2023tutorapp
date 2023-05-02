@@ -12,7 +12,7 @@ import com.example.techpythons2023.Prevalent.Prevalent;
 
 public class UserActivity extends AppCompatActivity {
 
-    Button myappsbtn,avjobsbtn;
+    Button myappsbtn,avjobsbtn,interbtn,logoutbtn;
     TextView useremail;
 
     @Override
@@ -23,14 +23,36 @@ public class UserActivity extends AppCompatActivity {
         myappsbtn = findViewById(R.id.myappsbtn);
         avjobsbtn = findViewById(R.id.avjobsbtn);
         useremail = findViewById(R.id.useremail);
+        interbtn = findViewById(R.id.interbtn);
+        logoutbtn = findViewById(R.id.logoutbtn);
 
         useremail.setText(Prevalent.currentOnlineUser.getEmail());
+
+        logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(UserActivity.this, LoginActivity.class);
+                startActivity(i);
+            }
+        });
+
 
         avjobsbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
                 Intent i = new Intent(UserActivity.this, UseropeningsActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        interbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(UserActivity.this, UserintersActivity.class);
                 startActivity(i);
             }
         });

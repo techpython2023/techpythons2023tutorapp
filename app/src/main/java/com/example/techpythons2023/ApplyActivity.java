@@ -346,7 +346,7 @@ public class ApplyActivity extends AppCompatActivity {
 
 
                 HashMap<String, Object> productMap = new HashMap<>();
-                productMap.put("Appid", productRandomKey);
+                productMap.put("Appid", productRandomKey.toString().replace(" ",""));
                 productMap.put("Date", saveCurrentDate);
                 productMap.put("Time", saveCurrentTime);
                 productMap.put("Idcopy", downloadImageUrl);
@@ -371,7 +371,7 @@ public class ApplyActivity extends AppCompatActivity {
                     stat ="Disqualified : do not meet requirements";
                 }
 
-                ProductsRef.child(productRandomKey).updateChildren(productMap)
+                ProductsRef.child(productRandomKey.toString().replace(" ","")).updateChildren(productMap)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task)

@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "techpythons2023"
 include ':app'
+include ':commonlib'
+include ':mobilertc'

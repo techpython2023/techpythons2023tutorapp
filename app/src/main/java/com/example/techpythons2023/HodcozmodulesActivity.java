@@ -31,23 +31,34 @@ public class HodcozmodulesActivity extends AppCompatActivity {
     ArrayList<ModuleItem> moduleItemArrayList;
     HodCourseModulesRecyclerAdapter adapter;
 
+    Button hodpotbtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hodcozmodules);
 
+        hodpotbtn = findViewById(R.id.hodpotbtn);
+
 
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        recyclerView = findViewById(R.id.hodcozrecyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
         moduleItemArrayList = new ArrayList<>();
 
-
+        hodpotbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(HodcozmodulesActivity.this, HodActivity.class);
+                startActivity(i);
+            }
+        });
 
         readData();
 

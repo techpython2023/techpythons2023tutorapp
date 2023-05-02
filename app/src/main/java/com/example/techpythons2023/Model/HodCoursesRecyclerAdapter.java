@@ -43,8 +43,8 @@ public class HodCoursesRecyclerAdapter extends RecyclerView.Adapter<HodCoursesRe
 
         HodCourseItem hodcourses = hodcourseItemItemArrayList.get(position);
 
-        holder.textcozname.setText(hodcourses.getCosname());
-        holder.textdepname.setText( hodcourses.getDepname());
+        holder.cozname.setText(hodcourses.getCosname());
+        holder.depname.setText( hodcourses.getDepname());
 
 
         holder.btncosmods.setOnClickListener(new View.OnClickListener() {
@@ -66,8 +66,8 @@ public class HodCoursesRecyclerAdapter extends RecyclerView.Adapter<HodCoursesRe
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textcozname;
-        TextView textdepname;
+        TextView depname;
+        TextView cozname;
 
 
 
@@ -77,8 +77,8 @@ public class HodCoursesRecyclerAdapter extends RecyclerView.Adapter<HodCoursesRe
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            textcozname = itemView.findViewById(R.id.textcozname);
-            textdepname = itemView.findViewById(R.id.textdepname);
+            cozname = itemView.findViewById(R.id.cozname);
+            depname = itemView.findViewById(R.id.depname);
             btncosmods = itemView.findViewById(R.id.btncosmods);
 
         }

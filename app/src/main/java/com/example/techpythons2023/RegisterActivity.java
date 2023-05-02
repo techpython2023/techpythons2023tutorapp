@@ -28,7 +28,7 @@ package com.example.techpythons2023;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private Button CreateAccountButton;
+    private Button CreateAccountButton,logbtn;
     private EditText InputEmail,  InputPassword;
     private EditText InputStudentnum;
 
@@ -40,11 +40,22 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
 
-        CreateAccountButton = (Button) findViewById(R.id.register_btn);
-        InputEmail = (EditText) findViewById(R.id.register_username_input);
-        InputStudentnum = (EditText) findViewById(R.id.register_studentnum);
-        InputPassword = (EditText) findViewById(R.id.register_password_input);
+        CreateAccountButton = (Button) findViewById(R.id.submitbtn);
+        InputEmail = (EditText) findViewById(R.id.Email);
+        InputStudentnum = (EditText) findViewById(R.id.stu);
+        InputPassword = (EditText) findViewById(R.id.Password);
+        logbtn = findViewById(R.id.logbtn);
 
+
+
+        logbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(i);
+            }
+        });
 
         CreateAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(email))
         {
-            Toast.makeText(this, "Please write your name...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please write your email...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(studentnum))
         {

@@ -8,7 +8,7 @@
     android:layout_gravity="center"
     android:backgroundTint="#2196F3"
 
-    tools:context=".HodappdetailsActivity">
+    tools:context=".UserinterdetailsActivity">
 
 
     <TextView
@@ -84,7 +84,7 @@
             android:id="@+id/textView"
             android:layout_width="348dp"
             android:layout_height="wrap_content"
-            android:text="APPLICATION DETAILS"
+            android:text="INTERVIEW DETAILS"
             android:textAlignment="center"
             android:textColor="#2196F3"
             android:textSize="15pt"
@@ -96,68 +96,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="19dp"
-        android:layout_height="19dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/percentage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:background="@drawable/roundedup"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/lecpotbtn"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="10dp"
-            android:text="HOD PORTAL"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.529" />
-
-        <Button
-            android:id="@+id/tareqbtn"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="15dp"
-            android:text="Schedule inter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.529" />
-
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:text="Applicant mark"
+        android:text="Date"
         android:textColor="#2196F3"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -171,7 +116,7 @@
         app:layout_constraintVertical_bias="0.326" />
 
     <TextView
-        android:id="@+id/appmark"
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -191,7 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:text="Application status"
+        android:text="Time"
         android:textColor="#2196F3"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -205,7 +150,7 @@
 
 
     <TextView
-        android:id="@+id/appstatus"
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -221,7 +166,7 @@
 
 
     <TextView
-        android:id="@+id/lecemail"
+        android:id="@+id/appliemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -236,104 +181,13 @@
         app:layout_constraintVertical_bias="0.53" />
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="180dp"
-        android:layout_height="129dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/roundedall"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.719"
-        tools:srcCompat="@tools:sample/avatars" />
-
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="180dp"
-        android:layout_height="129dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/roundedall"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.719"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Id copy"
-        android:textColor="#2196F3"
-        android:textSize="5pt"
-
-
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="academic rec / qualification"
-        android:textColor="#2196F3"
-
-        android:textSize="5pt"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.393"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/approverebtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/approve"
-        android:text="decline request"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
-
-    <ImageButton
-        android:id="@+id/declinereqbtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/decline"
-        android:text="decline request"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.863" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:text="Lecture email"
+        android:text="Applicant email"
         android:textColor="#2196F3"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -343,49 +197,83 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
-    <TextView
-        android:id="@+id/txtapprove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Approve application"
-        app:layout_constraintBottom_toBottomOf="@+id/approverebtn"
-        app:layout_constraintStart_toEndOf="@+id/approverebtn"
-        app:layout_constraintTop_toTopOf="@+id/approverebtn" />
 
     <TextView
-        android:id="@+id/txtdecline"
+        android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Decline application"
-        app:layout_constraintBottom_toBottomOf="@+id/declinereqbtn"
-        app:layout_constraintEnd_toStartOf="@+id/declinereqbtn"
-        app:layout_constraintTop_toTopOf="@+id/declinereqbtn" />
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
 
-    <ImageView
-        android:id="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <TextView
+        android:id="@+id/st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Status"
+        android:textColor="#2196F3"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.599" />
+
+
+
+
+
+    <Button
+        android:id="@+id/startbtn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="JOIN INTERVIEW MEETING"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/white"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.739" />
 
-    <ImageButton
-        android:id="@+id/closebtn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:visibility="gone"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/roundedup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0"
-        android:background="@drawable/decline"
-        />
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/userpotbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="USER PORTAL"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.529" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
